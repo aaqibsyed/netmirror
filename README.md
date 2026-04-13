@@ -6,7 +6,7 @@ NetMirror is a modern movie browsing web application built with React that allow
 
 ## 🚀 Live Demo
 
-👉 *(Will Add deployed link here after Vercel deployment)*
+👉 *https://netmirror-psi.vercel.app/*
 
 ---
 
