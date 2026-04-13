@@ -1,16 +1,138 @@
-# React + Vite
+# 🎬 NetMirror
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NetMirror is a modern movie browsing web application built with React that allows users to discover, search, and manage their favorite movies with a smooth and responsive user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+👉 *(Will Add deployed link here after Vercel deployment)*
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔍 Search Movies
+
+* Real-time movie search using TMDB API
+* Debounced input to reduce unnecessary API calls and improve performance
+
+### 🎯 Advanced Filtering
+
+* Filter movies by:
+
+  * Genre
+  * Rating
+  * Language
+* Uses TMDB **discover API** for accurate filtering
+
+### ♾ Infinite Scroll
+
+* Automatically loads more movies as you scroll
+* Implemented using **Intersection Observer API**
+* Prevents unnecessary API calls with proper guards (`hasMore`, `loading`)
+
+### ❤️ Favorites System
+
+* Add/remove movies from favorites
+* Persistent storage using **localStorage**
+* Instant UI updates using **React Context API**
+
+### 🎬 Movie Details & Trailer
+
+* View detailed movie information
+* Watch trailers dynamically fetched from API
+
+### ⚡ Skeleton Loading
+
+* Displays skeleton cards while loading data
+* Improves perceived performance and user experience
+
+---
+
+## 🧠 Technical Highlights
+
+### 📌 Intersection Observer API
+
+Used for implementing infinite scroll efficiently without relying on scroll event listeners, improving performance.
+
+### 📌 Debouncing
+
+Prevents excessive API calls by delaying search execution until the user stops typing.
+
+### 📌 Context API
+
+Manages global state for favorites, avoiding prop drilling and keeping components clean.
+
+### 📌 Local Storage Persistence
+
+Ensures favorite movies remain saved even after page refresh.
+
+### 📌 Controlled Components
+
+Used for handling form inputs (search and filters) to maintain predictable UI behavior.
+
+---
+
+## 🛠 Tech Stack
+
+* **React (Vite)**
+* **Tailwind CSS**
+* **TMDB API**
+* **React Router**
+* **Lucide Icons**
+
+---
+
+
+## ⚙️ Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/netmirror.git
+
+# Navigate into project
+cd netmirror
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file in the root:
+
+```env
+VITE_API_KEY=your_tmdb_api_key
+```
+
+---
+
+## 💡 Future Improvements
+
+* Infinite scroll with virtualization for better performance
+* Dark/light theme toggle
+* Genre list fetched dynamically from API
+* Better error handling & retry logic
+* UI animations and transitions
+* Login Authentication Page
+
+---
+
+## 🙌 Acknowledgements
+
+* TMDB API for movie data
+* Inspiration from modern streaming platforms
+
+---
+
+## 📌 Conclusion
+
+NetMirror demonstrates real-world frontend concepts including API handling, performance optimization, state management, and user experience design.
+
+---
